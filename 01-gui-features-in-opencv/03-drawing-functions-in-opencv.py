@@ -19,6 +19,7 @@ pts = pts.reshape((-1, 1, 2))
 cv.polylines(img, [pts], True, (0, 255, 255))  # True = close the shape
 
 font = cv.FONT_HERSHEY_SIMPLEX
+# img, text, bottom-left, font type, font scale, color, thickness, line type
 cv.putText(img, "OpenCV", (10, 500), font, 4, (255, 255, 255), 2, cv.LINE_AA)
 
 cv.imshow("Display window", img)
