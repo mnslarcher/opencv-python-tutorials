@@ -1,0 +1,9 @@
+# conda env create --prefix ./env --file environment.yml  # create the environment
+# conda activate ./env  # activate the environment
+# conda env update --prefix ./env --file environment.yml --prune  # update the environment
+# conda deactivate  # deactivate the environment
+channels:
+  - conda-forge
+dependencies:
+  - notebook
+  - opencv
