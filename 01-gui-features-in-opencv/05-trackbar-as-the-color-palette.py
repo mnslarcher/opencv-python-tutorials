@@ -5,6 +5,7 @@ import numpy as np
 def nothing(x):
     pass
 
+
 # Create a black image, a window
 img = np.zeros((300, 512, 3), np.uint8)
 cv.namedWindow("image")
@@ -36,5 +37,3 @@ while True:
         img[:] = [r, g, b]
 
 cv.destroyAllWindows()
-    
-

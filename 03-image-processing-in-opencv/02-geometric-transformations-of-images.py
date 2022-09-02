@@ -21,12 +21,12 @@ cv.destroyAllWindows()
 
 # Translation
 
-img = cv.imread("../samples/data/messi5.jpg", 0) # 0 = grayscale
+img = cv.imread("../samples/data/messi5.jpg", 0)  # 0 = grayscale
 rows, cols = img.shape
 
 # Translation matrix with tx = 100, ty = 50
 M = np.float32([[1, 0, 100], [0, 1, 50]])
-dst = cv.warpAffine(img, M, (cols, rows)) # third arg is width, height
+dst = cv.warpAffine(img, M, (cols, rows))  # third arg is width, height
 
 cv.imshow("image", cv.hconcat([img, dst]))
 cv.waitKey(0)
@@ -36,7 +36,7 @@ cv.destroyAllWindows()
 # Rotation
 
 # Rotation by a theta angle:
-# [[cosO, -sinO], 
+# [[cosO, -sinO],
 #  [sinO, cosO]]
 
 # Scaled rotation with adjustable center of rotation
@@ -58,7 +58,7 @@ cv.destroyAllWindows()
 
 # Affine transformation
 
-# [[A,   t], 
+# [[A,   t],
 #  [0^T, 1]
 # Invariance: parallelism, volume ratio
 
@@ -88,7 +88,7 @@ plt.show()
 
 # Perspective Transformation
 
-# [[A,   t], 
+# [[A,   t],
 #  [a^T, v]
 # Invariance: plane intersection and tangency
 
@@ -114,6 +114,3 @@ plt.imshow(dst)
 plt.title("Ouput")
 
 plt.show()
-
-
-
