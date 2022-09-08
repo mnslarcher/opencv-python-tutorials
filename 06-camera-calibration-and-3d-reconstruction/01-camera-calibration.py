@@ -59,7 +59,7 @@ cv.destroyAllWindows()
 
 # Calibration
 
-# mtx: Input/output 3x3 floating-point camera intrinsic matrix 
+# mtx: Input/output 3x3 floating-point camera intrinsic matrix
 # dist: Input/output vector of distortion coefficients
 # rvecs: Output vector of rotation vectors (Rodrigues) estimated for each pattern view
 # tvecs: Output vector of translation vectors estimated for each pattern view
@@ -120,4 +120,3 @@ for i in range(len(objpoints)):
     mean_error += error
 
 print(f"Total error: {mean_error / len(objpoints)}")
-
