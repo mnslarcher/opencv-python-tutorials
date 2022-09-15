@@ -49,4 +49,3 @@ plt.subplot(133)
 plt.imshow(dst, "gray")
 
 plt.show()
-

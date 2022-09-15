@@ -52,8 +52,12 @@ plt.show()
 
 cal_debevec = cv.createCalibrateDebevec()
 crf_debevec = cal_debevec.process(img_list, times=exposure_times)
-hdr_debevec = merge_debevec.process(img_list, times=exposure_times.copy(), response=crf_debevec.copy())
+hdr_debevec = merge_debevec.process(
+    img_list, times=exposure_times.copy(), response=crf_debevec.copy()
+)
 
 cal_robertson = cv.createCalibrateRobertson()
 crf_robertson = cal_debevec.process(img_list, times=exposure_times)
-hdr_robertson = merge_robertson.process(img_list, times=exposure_times.copy(), response=crf_robertson.copy())
+hdr_robertson = merge_robertson.process(
+    img_list, times=exposure_times.copy(), response=crf_robertson.copy()
+)
